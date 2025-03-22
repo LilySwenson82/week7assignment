@@ -58,7 +58,7 @@ console.log(`Name length sum: ${nameLengthListSum}`);
 
 // Step 7
 
-let concatenateLoop = (word, n) => {
+const concatenateLoop = (word, n) => {
   let result = "";
   for(let i = 0; i < n; i++) {
     result += word;
@@ -70,13 +70,13 @@ console.log(concatenateLoop("TestPhrase", 4));
 
 // Step 8
 
-let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
+const fullName = (firstName, lastName) => `${firstName} ${lastName}`;
 
 console.log(`Full Name: ${fullName("David", "Smith")}`);
 
 // Step 9
 
-let sumGreaterThan100 = (array) => {
+const sumGreaterThan100 = (array) => {
   let sum = 0;
   for(let i = 0; i < array.length; i++) {
     sum += array[i];
@@ -88,7 +88,7 @@ console.log(`Sum of array > 100: ${sumGreaterThan100([40, 37, 22, 52])}`);
 
 // Step 10
 
-let arrayAverage = (array) => {
+const arrayAverage = (array) => {
   let sum = 0;
   for(let i = 0; i < array.length; i++) {
     sum += array[i];
@@ -100,13 +100,13 @@ console.log(`Average of array: ${arrayAverage([36, 200, -23, -190])}`)
 
 // Step 11
 
-let arrayCompareAverage = (array1, array2) => arrayAverage(array1) > arrayAverage(array2);
+const arrayCompareAverage = (array1, array2) => arrayAverage(array1) > arrayAverage(array2);
 
 console.log(`Compare array averages: ${arrayCompareAverage([8, 10, 9], [5, 73, 2])}`);
 
 // Step 12
 
-let willBuyDrink = (isHotOutside, moneyInPocket) => moneyInPocket > 10.5 && isHotOutside;
+const willBuyDrink = (isHotOutside, moneyInPocket) => moneyInPocket > 10.5 && isHotOutside;
 
 console.log(`Will buy drink: ${willBuyDrink(true, 25.10)}`);
 
@@ -114,6 +114,6 @@ console.log(`Will buy drink: ${willBuyDrink(true, 25.10)}`);
 
 /* This function will determine whether the average person will purchase a drink given the
     parameters of if it's hot outside and an array containing how much money everyone has */
-let willAverageBuyDrink = (isHotOutside, wallets) => willBuyDrink(isHotOutside, arrayAverage(wallets));
+const willAverageBuyDrink = (isHotOutside, wallets) => willBuyDrink(isHotOutside, arrayAverage(wallets));
 
 console.log(`Will the average person buy drink: ${willAverageBuyDrink(true, [4.10, 8.75, 12.92])}`);
